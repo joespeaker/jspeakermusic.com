@@ -4,6 +4,7 @@
     background: url(../imgs/hero.jpeg);
     background-size: cover;
     background-attachment: fixed;
+    background-position: center center;
 }
 .fill {
     height: 100%;
@@ -30,4 +31,16 @@ i {
 .tour {
     background-color: #15242b;
     color: #fff;
+}
+.smaller-div {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    .smaller-div {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
 }
