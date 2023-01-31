@@ -1,0 +1,64 @@
+/* #E8D3B9  Beige*/
+/* #15242b Dark Blue*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Mukta', sans-serif;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #000;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    margin: 0 50px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: larger;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #E8D3B9;
+}
+hr {
+    width: 100%;
+    border: 1px solid #E8D3B9;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #444;
+}
