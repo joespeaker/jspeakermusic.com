@@ -233,6 +233,23 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-3px);
 }
 
+.footer-press-link {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.footer-press-link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
 .footer-copy {
     font-size: 0.85rem;
     color: var(--color-gray);
@@ -271,4 +288,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Utility */
 .text-primary-custom {
     color: var(--color-primary) !important;
+}
+
+/* Remove underline from all icon links */
+a {
+    text-decoration: none;
 }

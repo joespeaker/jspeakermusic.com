@@ -1,0 +1,352 @@
+/* Press Page - Minimal EPK Styles */
+
+.press-page {
+    background-color: var(--color-dark);
+    min-height: 100vh;
+}
+
+.press-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 24px 60px;
+}
+
+/* Back Link */
+.back-link {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    color: var(--color-gray);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+}
+
+.back-link i {
+    margin-right: 8px;
+    font-size: 0.75rem;
+}
+
+/* Header */
+.press-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-top: 40px;
+}
+
+.press-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 12vw, 6rem);
+    color: var(--color-primary);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.press-tagline {
+    font-size: 1.1rem;
+    color: var(--color-gray);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+}
+
+.press-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sections */
+.press-section {
+    margin-bottom: 60px;
+}
+
+.press-section-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+/* Divider */
+.press-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 60px 0;
+}
+
+/* Bio */
+.press-bio p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+}
+
+/* Listen Links */
+.press-listen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.listen-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--color-light);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.listen-link:hover {
+    background: rgba(232, 211, 185, 0.1);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.listen-link i {
+    font-size: 1.25rem;
+    color: inherit;
+}
+
+.listen-link span {
+    letter-spacing: 0.05em;
+}
+
+/* Track List */
+.track-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.track-item:last-child {
+    border-bottom: none;
+}
+
+.track-number {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+    width: 32px;
+    flex-shrink: 0;
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+}
+
+.track-name {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--color-light);
+    font-weight: 400;
+}
+
+.track-year {
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    margin-left: 16px;
+}
+
+/* Press Photos */
+.press-photos-note {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin-bottom: 24px;
+}
+
+.press-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.photo-placeholder {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--color-gray);
+}
+
+.photo-placeholder i {
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.photo-placeholder span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+}
+
+.press-photo {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.press-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.press-photo:hover img {
+    transform: scale(1.02);
+}
+
+.press-photo .download-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 18, 21, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.press-photo:hover .download-overlay {
+    opacity: 1;
+}
+
+.download-overlay i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+/* Contact */
+.press-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.contact-value:hover {
+    color: var(--color-primary);
+}
+
+/* Footer */
+.press-footer {
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.press-footer p {
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .press-container {
+        padding: 60px 20px 40px;
+    }
+
+    .back-link {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .press-header {
+        margin-bottom: 60px;
+        padding-top: 0;
+    }
+
+    .press-tagline {
+        font-size: 1rem;
+    }
+
+    .press-section {
+        margin-bottom: 40px;
+    }
+
+    .press-divider {
+        margin: 40px 0;
+    }
+
+    .press-listen {
+        flex-direction: column;
+    }
+
+    .listen-link {
+        justify-content: center;
+    }
+
+    .press-photos-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .photo-placeholder {
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 480px) {
+    .press-title {
+        letter-spacing: 0.05em;
+    }
+
+    .press-bio p {
+        font-size: 0.95rem;
+    }
+
+    .track-name {
+        font-size: 0.9rem;
+    }
+}
