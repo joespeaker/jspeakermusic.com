@@ -3,127 +3,203 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="jspeaker is a music artist from small town nebraska">
+    <meta name="description" content="jspeaker - Original music from small town Nebraska. Stream now on Spotify, Apple Music, and more.">
     <meta name="author" content="jspeaker">
-    <meta name="generator" content="Hugo 0.88.1">
+    <meta name="keywords" content="jspeaker, music, artist, Nebraska, indie, original music">
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="imgs/favicon_io/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#15242b">
 
-    <title>jspeaker </title>
+    <title>jspeaker | Official Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/f7b26bdd81.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="scroll.js"></script>
   </head>
   <body>
-    <!--navbar-->
-    <!-- <nav>
-      <ul class="text-center">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="music.html">music</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
-    </nav> -->
-    <!--/navbar-->
-    <!--hero-->
-    <div class="row">
-      <div class="col-12 hero">
-        <div class="hero text-center">
-          <p class="center">jspeaker</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">jspeaker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#latest">Latest</a></li>
+            <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tour">Tour</a></li>
+            <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-    <!--/hero-->
-    <!--links-->
-    <div class="row links">
-      <div class="col-12 music mb-5">
-        <div class="music-content text-center">
-          <h3 class="pt-5 pb-5">listen</h3>
-          <a href="https://open.spotify.com/artist/0PqE7nnc4olRYC5i9LyzdX?si=t0eEQJXWTwy7_TBvsSKYuQ"><i class="fa-brands fa-spotify"></i></a>
-          <a href="https://music.apple.com/us/artist/jspeaker/1518658019"><i class="fa-brands fa-apple"></i></a>
-          <a href="https://www.youtube.com/channel/UCVjy8UxYSm1KUe0fbtaKTlQ"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://music.amazon.com/artists/B088WPX9S9/jspeaker"><i class="fa-brands fa-amazon"></i></a>
-        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">jspeaker</h1>
+        <p class="hero-subtitle">Original music from Nebraska</p>
+        <a href="#music" class="btn btn-primary btn-lg hero-cta">Listen Now</a>
       </div>
-      <hr>
-      <div class="col-12 social mb-5">
-        <div class="social-content text-center">
-          <h3 class="pt-5 pb-5">socials</h3>
-          <a href="https://www.instagram.com/jspeakermusic/"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@jspeakermusic"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <hr>
-      <div class="row links">
-        <div class="col-12 music mb-5">
-          <div class="text-center">
-            <h3 class="pt-5 pb-5">merch</h3>
-            <a href="https://jspeaker.myshopify.com/"><i class="fa-brands fa-shopify"></i></a>
+    </section>
+
+    <!-- Latest Release Section -->
+    <section id="latest" class="section latest-section">
+      <div class="container">
+        <h2 class="section-title">Latest Release</h2>
+        <p class="section-subtitle">New music out now</p>
+        <div class="release-card">
+          <div class="release-artwork">
+            <img src="imgs/album-cover.jpg" alt="Latest Release Album Cover">
+            <div class="release-play">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="release-info">
+            <h3 class="release-title">Track Title</h3>
+            <p class="release-artist">jspeaker</p>
+            <p class="release-meta">Single &bull; 2025</p>
+            <div class="release-links">
+              <a href="https://open.spotify.com/artist/0PqE7nnc4olRYC5i9LyzdX" class="release-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-spotify"></i>
+              </a>
+              <a href="https://music.apple.com/us/artist/jspeaker/1518658019" class="release-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-apple"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCVjy8UxYSm1KUe0fbtaKTlQ" class="release-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
           </div>
         </div>
-      <hr>
-      <div class="col-12 tour mb-5">
-        <div class="tour-content text-center">
-          <h3 class="pt-5 pb-5">tour</h3>
-          <p>coming soon...</p>
+      </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="section music-section">
+      <div class="container">
+        <h2 class="section-title">Listen</h2>
+        <p class="section-subtitle">Stream on your favorite platform</p>
+        <div class="platform-grid">
+          <a href="https://open.spotify.com/artist/0PqE7nnc4olRYC5i9LyzdX?si=t0eEQJXWTwy7_TBvsSKYuQ" class="platform-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+          </a>
+          <a href="https://music.apple.com/us/artist/jspeaker/1518658019" class="platform-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-apple"></i>
+            <span>Apple Music</span>
+          </a>
+          <a href="https://www.youtube.com/channel/UCVjy8UxYSm1KUe0fbtaKTlQ" class="platform-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://music.amazon.com/artists/B088WPX9S9/jspeaker" class="platform-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-amazon"></i>
+            <span>Amazon Music</span>
+          </a>
         </div>
       </div>
-    </div>
-<!--/links-->
+    </section>
 
-    <!-- Begin Mailchimp Signup Form -->
-    <div class="row text-center">
-      <div class="col-12 smaller-div text-center">
-        <div id="mc_embed_signup" class="text-center mb-5 form">
-            <form action="https://outlook.us12.list-manage.com/subscribe/post?u=63b651ab95cf48f8658a96f11&amp;id=b5e44eba24&amp;f_id=009940e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                <h2>get notified</h2>
-        <div class="mc-field-group text-center">
-          <input type="text" value="" name="FNAME" class="form-control mb-2" id="mce-FNAME" placeholder="first name">
-          <span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
+    <!-- Tour Section -->
+    <section id="tour" class="section tour-section">
+      <div class="container">
+        <h2 class="section-title">Tour</h2>
+        <p class="section-subtitle">Upcoming shows</p>
+        <div class="tour-content">
+          <div class="no-shows">
+            <i class="fas fa-calendar-alt"></i>
+            <p>New dates coming soon</p>
+            <span>Sign up below to be the first to know</span>
+          </div>
         </div>
-        <div class="mc-field-group">
-          <input type="text" value="" name="LNAME" class="form-control mb-2" id="mce-LNAME" placeholder="last name">
-          <span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
-        </div>
-        <div class="mc-field-group">
-          <input type="email" value="" name="EMAIL" class="required email form-control mb-2" id="mce-EMAIL" required placeholder="email address">
-          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-        </div>
-          <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_63b651ab95cf48f8658a96f11_b5e44eba24" tabindex="-1" value=""></div>
-                <div class="optionalParent">
-                    <div class="clear foot">
-                        <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn myButton">
-                    </div>
-                </div>
+      </div>
+    </section>
+
+    <!-- Merch Section (Hidden until merch is available)
+    <section id="merch" class="section merch-section">
+      <div class="container">
+        <h2 class="section-title">Merch</h2>
+        <p class="section-subtitle">Rep the music</p>
+        <a href="https://jspeaker.myshopify.com/" class="btn btn-outline-light btn-lg merch-btn" target="_blank" rel="noopener">
+          <i class="fa-brands fa-shopify"></i> Shop Now
+        </a>
+      </div>
+    </section>
+    -->
+
+    <!-- Connect Section -->
+    <section id="connect" class="section connect-section">
+      <div class="container">
+        <div class="row">
+          <!-- Social Links -->
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h2 class="section-title">Follow</h2>
+            <p class="section-subtitle">Stay connected</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/jspeakermusic/" class="social-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@jspeakermusic" class="social-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
             </div>
-        </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-      </div>
-    </div>
-    <!--End mc_embed_signup-->
+          </div>
 
-    <!--footer-->
-    <div class="row">
-      <div class="col-12 footer">
-        <div class="footer-content text-center">
-          <p>2023 | jspeakermusic.com </p>
+          <!-- Newsletter -->
+          <div class="col-lg-7">
+            <div class="newsletter-card">
+              <h2 class="section-title">Get Notified</h2>
+              <p class="section-subtitle">Be first to know about new music and shows</p>
+              <form action="https://outlook.us12.list-manage.com/subscribe/post?u=63b651ab95cf48f8658a96f11&amp;id=b5e44eba24&amp;f_id=009940e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form" target="_blank" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="First name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME" placeholder="Last name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" required placeholder="Email address">
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_63b651ab95cf48f8658a96f11_b5e44eba24" tabindex="-1" value="">
+                </div>
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-lg w-100">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/footer-->
-    
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-brand">jspeaker</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jspeakermusic/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@jspeakermusic" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://open.spotify.com/artist/0PqE7nnc4olRYC5i9LyzdX" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+          <p class="footer-copy">&copy; 2025 jspeaker. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,46 +1,469 @@
+/* Hero Section */
 .hero {
+    position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: url(../imgs/hero.jpeg);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    background-position: center center;
 }
-.fill {
-    height: 100%;
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 18, 21, 0.4) 0%,
+        rgba(10, 18, 21, 0.6) 50%,
+        rgba(10, 18, 21, 0.95) 100%
+    );
+}
 
-}
-.center {
-    margin: auto;
-    color: #E8D3B9;
-    font-size: 45px;
-    line-height: 100vh;
-    z-index: -1;
-}
-
-.links {
-    background-color: #15242b;
-    color: #fff;
-}
-i {
-    color: #fff;
-    font-size: 30px;
-    margin: 0 10px;
-}
-.tour {
-    background-color: #15242b;
-    color: #fff;
-}
-.smaller-div {
-    width: 40%;
+.hero-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    margin: auto;
+    animation: fadeInUp 1s ease-out;
 }
-@media screen and (max-width: 600px) {
-    .smaller-div {
-        width: 90%;
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 15vw, 10rem);
+    color: var(--color-primary);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 2;
+}
+
+.scroll-indicator i {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Latest Release Section */
+.latest-section {
+    background: var(--color-dark);
+}
+
+.release-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+}
+
+.release-artwork {
+    position: relative;
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.release-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.release-artwork:hover img {
+    transform: scale(1.05);
+}
+
+.release-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.release-artwork:hover .release-play {
+    opacity: 1;
+}
+
+.release-play i {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    margin-left: 4px;
+}
+
+.release-info {
+    flex: 1;
+}
+
+.release-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-light);
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+}
+
+.release-artist {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.release-meta {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+}
+
+.release-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.release-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.release-link i {
+    font-size: 1.25rem;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.release-link:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.release-link:hover i {
+    color: var(--color-secondary);
+}
+
+/* Music Section */
+.music-section {
+    background: var(--color-secondary);
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.platform-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.platform-card:hover {
+    background: rgba(232, 211, 185, 0.1);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.platform-card i {
+    font-size: 3rem;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.platform-card:hover i {
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.platform-card span {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: var(--transition);
+}
+
+.platform-card:hover span {
+    color: var(--color-light);
+}
+
+/* Tour Section */
+.tour-section {
+    background: var(--color-dark);
+}
+
+.tour-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.no-shows {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.no-shows i {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.no-shows p {
+    font-size: 1.25rem;
+    color: var(--color-light);
+    margin-bottom: 0.5rem;
+}
+
+.no-shows span {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+/* Merch Section */
+.merch-section {
+    background: var(--color-secondary);
+    text-align: center;
+}
+
+.merch-btn {
+    margin-top: 1rem;
+}
+
+.merch-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Connect Section */
+.connect-section {
+    background: var(--color-dark);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.social-link i {
+    font-size: 1.75rem;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.social-link:hover i {
+    color: var(--color-secondary);
+}
+
+/* Newsletter */
+.newsletter-card {
+    background: var(--color-secondary);
+    padding: 3rem;
+}
+
+.newsletter-card .section-title {
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.newsletter-card .section-subtitle {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.newsletter-form .form-group:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(10, 18, 21, 0.98);
+        padding: 1.5rem;
+        margin-top: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link {
+        padding: 0.75rem 0 !important;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .release-card {
+        flex-direction: column;
         text-align: center;
-        margin: auto;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .release-artwork {
+        width: 220px;
+        height: 220px;
+    }
+
+    .release-title {
+        font-size: 2rem;
+    }
+
+    .release-links {
+        justify-content: center;
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .platform-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .platform-card i {
+        font-size: 2rem;
+    }
+
+    .newsletter-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .newsletter-card .section-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .newsletter-card .section-subtitle {
+        text-align: center;
+    }
+
+    .newsletter-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .social-link {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        letter-spacing: 0.1em;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-primary, .btn-outline-light {
+        padding: 0.875rem 2rem;
+        font-size: 0.85rem;
     }
 }
